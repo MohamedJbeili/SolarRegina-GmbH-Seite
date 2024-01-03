@@ -1,0 +1,597 @@
+/* golbale Css */
+*,:after,:before,section{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;}
+body{font-family: 'Roboto', sans-serif;}
+@font-face {
+    font-family: "Roboto";
+    src:url("../fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto";
+    src:url("../fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+ul{list-style: none;}
+a{text-decoration: none; cursor: pointer;}
+img{max-width: 100%;}
+p{line-height: 1.6; font-family: "Roboto", sans-serif;}
+h2{font-size: 2.5rem;}
+h3{font-size: 1.8rem;}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.unsereExpertise figure{overflow: hidden;}
+.unsereExpertise figure:hover img{ transform: scale(1.2); transition: 0.5s ease-in-out; -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -ms-transform: scale(1.2); -o-transform: scale(1.2); }
+.show-hide{ opacity: 1 !important; }
+/* ****************** */
+
+/*  Css Variable */
+:root{
+    --main-color: #1b394c;
+    --orange :#f69800;
+    --hell-blue:#356da0;
+    --overlay-blue:rgba(53, 108, 160, 0.8);
+    --gray:#eeeeee;
+    --section-padding: 1.5rem;
+    --main-gradient-90:linear-gradient(+90deg, rgba(53,109,160,1) 0%, rgba(27,57,76,1) 100%);
+    --main-gradient-90-:linear-gradient(-90deg, rgba(53,109,160,1) 0%, rgba(27,57,76,1) 100%);
+    --main-gradient:linear-gradient(180deg, rgba(53,109,160,1) 0%, rgba(27,57,76,1) 100%);
+    --grau-gradient:linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 50%,rgba(238,238,238,1) 100%);
+    --faq-bg-mt:200px;
+}
+
+/* wrapper */
+
+.wrapper{width:100%; max-width: 1400px; margin: 0 auto; overflow: hidden;}
+
+/* Header Bereich*/
+header{ width:100%; max-width: 1400px; top: 0; z-index: 1000;}
+
+/* Header-top Bereich */
+ .header-top{position: relative;
+    background:var(--main-gradient) ; height: 160px; 
+}
+.header-top::before{content: ""; width:287px; height: 100%; 
+    position: absolute; top: 0; left: 0;z-index: 1; background:url(../bilder/header-bg.svg) no-repeat left center;}
+.header-top figure{width: 160px !important; position: relative; z-index: 2;}
+/* Header-right Bereich */
+.header-right{padding: var(--section-padding); padding-left: 0;
+    }
+.header-right h1{font-size: 3rem; font-weight: bold; color: #fff; letter-spacing: 4px;}
+.header-right h1 span:first-child{ color: var(--orange);}
+.header-right h1 span:last-child{ font-size: 2rem;}
+.header-right p{font-size: 1.15rem;}
+/* Navi Bereich */
+header nav.navbar{width: 100%; height: 40px; padding-block: 0 !important; background-color: var(--gray); top: 0;}
+header .navbar-collapse{justify-content: right; padding-right: 1.5rem;}
+header nav ul li{    border-left: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgba(0,0,0,0.1);
+    }
+header nav ul a{ font-weight: bold !important; color: var(--main-color) !important; transition:500ms !important ; -webkit-transition:500ms !important ; -moz-transition:500ms !important ; -ms-transition:500ms !important ; -o-transition:500ms !important ; }
+header nav ul li:hover a,header nav ul li:focus a{color: var(--orange) !important;}
+
+/* Slider Bereich*/
+.slider-container{position: relative;width:100%; max-width: 1400px;height: 737px;
+}
+.slider{width: 100%;height: 100%;}
+.slider a{ position: absolute;top: 0;left: 0;display: block;width: 100%; height: 100%;
+transition: opacity 0.75s ease-in-out;color: var(--main-color);
+}
+.slide:first-child{opacity: 1;}
+.teaser-text{position: absolute;z-index: 1;right: 0;top:70px;
+width: 400px;height: auto;
+background: var(--grau-gradient);display: flex;justify-content: center;align-items: center;
+padding-inline: 1.5rem;box-shadow: -9px 10px 10px 0px #00000052;padding-block: .5rem;
+}
+.teaser-text.planung,.teaser-text.umbau{width: 543px; box-sizing: border-box;}
+.teaser-text.plannung figure{width: 28%;}
+.teaser-text img{width: 120px; }
+.teaser-text h2{font-size: 3rem; font-weight: bold;text-align: end; }
+.teaser-text p{margin-bottom: 0;font-size: 20px; text-align: end;}
+
+#prev, #next{position: absolute;top: 0;z-index: 200;font-size: 5rem;color: var(--main-color);
+text-shadow: 0px 0px 8px #fff,0px 0px 8px #fff,0px 0px 8px #fff;cursor: pointer;
+top: 50%;transform:translateY(-50%) ;-webkit-transform:translateY(-50%) ;
+-moz-transform:translateY(-50%) ;-ms-transform:translateY(-50%) ;-o-transform:translateY(-50%) ;
+}
+#prev{left: 1rem;}
+#next{right: 1rem;}
+
+/* Modal Bereich */
+.modal-content{background: var(--grau-gradient);}
+.modal-header{background-color: var(--orange);}
+.modal-header h1{color: #fff; font-size: 2rem;}
+.modal-body {color: var(--main-color);}
+.modal-footer{border-top: 2px solid var(--gray);}
+.modal-footer button{background: var(--main-gradient); color: #fff;}
+
+
+/* Section Anleitung */
+#anleitung{padding: 3rem var(--section-padding); gap: 1rem; background: url(../bilder/Bild_20.jpg) no-repeat center center/cover fixed; position: relative;isolation: isolate;}
+#anleitung::after{content: ""; position: absolute;inset: 0; width: 100%;height: 100%; background: rgba(255,255,255,.9);z-index: -1; }
+#anleitung article{ animation:fadeInLeft 1s ease-in-out ; -webkit-animation:fadeInLeft 1s ease-in-out ; }
+#anleitung article div{ width: 85%; transform:rotate(-5deg) ; -webkit-transform:rotate(-5deg) ; -moz-transform:rotate(-5deg) ; -ms-transform:rotate(-5deg) ; -o-transform:rotate(-5deg) ; }
+#anleitung article h2{color: var(--hell-blue);font-size: 1.9rem;}
+#anleitung figure{
+     border: 5px solid #fff;
+     box-shadow: 1px -1px 14px -1px rgba(0, 0, 0, 0.3);;
+     transform:rotate(-5deg) ; -webkit-transform:rotate(-5deg) ; -moz-transform:rotate(-5deg) ; -ms-transform:rotate(-5deg) ; -o-transform:rotate(-5deg) ;
+     animation:fadeInRight 1s ease-in-out ;
+     -webkit-animation:fadeInRight 1s ease-in-out ;
+}
+#anleitung figure img{width: 50%; height: 253px;}
+
+@keyframes fadeInLeft
+{0%{opacity:0;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}
+to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}
+@-webkit-keyframes fadeInLeft
+{0%{opacity:0;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}
+to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}
+
+@keyframes fadeInRight{
+    0%{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+    to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}
+@-webkit-keyframes fadeInRight{
+    0%{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+    to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}
+
+    
+
+/* Section unsere Expertise */
+.unsereExpertise{
+    background:var(--main-gradient-90-);
+    scroll-behavior: smooth;
+   
+}
+#unsereExpertise h2{ color: #fff;}
+#unsereExpertise h2 + p{font-size: 1.3rem; color: var(--orange);}
+#unsereExpertise object{margin: 2rem auto;}
+#unsereExpertise article{background: var(--grau-gradient); padding: 1.3rem 1rem;}
+#unsereExpertise article p{font-size: 1.2rem; color: var(--main-color);}
+#unsereExpertise article p span{color: var(--hell-blue); font-size: 1.25rem; font-weight: bold;}
+#unsereExpertise article p span span{color: var(--orange);}
+#unsereExpertise h3{color: var(--hell-blue);}
+#unsereExpertise h3 +p {color: var(--main-color);}
+
+#unsereExpertise #Beratung figure{animation:fadeInRight 1s ease-in-out ;-webkit-animation:fadeInRight 1s ease-in-out ;}
+#unsereExpertise #Beratung div{animation:fadeInLeft 1s ease-in-out ; -webkit-animation:fadeInLeft 1s ease-in-out ;}
+
+#unsereExpertise #Technologie figure{ animation:zoomIn 1s ease-in-out ; -webkit-animation:zoomIn 1s ease-in-out ; }
+
+#unsereExpertise #Technologie div{ animation:zoomIn 1s ease-in-out ; -webkit-animation:zoomIn 1s ease-in-out ; }
+
+:is(#Beratung,#Technologie) figure{overflow: hidden;}
+:is(#Beratung,#Technologie) figure:hover img{ transform: scale(1.2) rotate(2deg); opacity: 0.8; transition: 0.5s ease-in-out; -webkit-transform: scale(1.2) rotate(2deg); -moz-transform: scale(1.2) rotate(2deg); -ms-transform: scale(1.2) rotate(2deg); -o-transform: scale(1.2) rotate(2deg); }
+
+
+/* Zooming Animation */
+@-webkit-keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+/* Section das erstanfrage Formular */
+input::placeholder{color: var(--main-color)!important; }
+#erstanfrage-Formular{
+	background:  var(--overlay-blue) url(../bilder/form.jpg) no-repeat center;
+    position: relative;
+    isolation: isolate;
+    padding:3rem;scroll-behavior: smooth;
+    }
+    #erstanfrage-Formular:before {
+        content: "";
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        background: var(--overlay-blue);
+        z-index: -1;
+      }
+  
+    #erstanfrage-Formular form{
+ 
+	padding:3rem 2rem 1rem 2rem;
+	display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    margin-inline: auto;
+    }
+#erstanfrage-Formular form div:first-child{width: 100%;}
+#erstanfrage-Formular form div h2{
+     display: inline-block;padding-bottom:0.5rem;
+     border-bottom:2px solid var(--orange);color: #fff;}
+#erstanfrage-Formular form div p{color: #fff;}
+#erstanfrage-Formular form div hr{
+	height:2px;
+	margin-block: 1rem;
+	background:rgba(255,255,255,1);
+}
+#erstanfrage-Formular form h3{color: var(--orange);}
+#erstanfrage-Formular form span{color: #fff; margin-left: 0.5rem;}
+#erstanfrage-Formular form .personAngabe span{font-size: 1.3rem; color: var(--orange);}
+#erstanfrage-Formular form #left,#erstanfrage-Formular form #right{width: 48%;}
+form .form-group{margin-bottom: 1.5rem;}
+form #ausrichtung.form-group,form .Kollektoren.form-group,
+form #dachneigung.form-group{margin-bottom: 0.3rem;}
+form input,form textarea, form select{
+        background:rgba(255,255,255,.4) !important;}
+form input:focus,form textarea:focus, form select:focus{
+    background:rgba(255,255,255,1) !important;box-shadow: 1px 1px 5px 1px var(--orange) !important;}
+form label{color:#fff; margin-bottom: 1rem !important;} 
+form #ausrichtung .form-check-inline label{margin-bottom: 0; width: 68px;}
+form #dachneigung .form-check-inline label{margin-bottom: 0;width: 30px}
+form input[type=text]{
+width:100%;color:#fff;height:50px;border:none;padding:0.5rem;border-radius:10px;
+-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;
+}
+form input[type=email],form input[type=tel],
+form select{padding: 0.5rem !important;border-radius:10px; height:50px;}
+form #solarkollektoren input,form input#wohnflaeche,
+form select#warmWasserVerbrauch{width: 88% !important; display: inline-block;}
+form input[type=radio]{background:rgba(255,255,255,.2) !important;}
+form input[type=radio]:checked{outline: none; background-color: var(--orange)!important;}
+.solarthermieanlage {display: flex;flex-direction: column; margin-bottom: 0 !important;}
+form button.btn{background-color: var(--orange); color: #fff; margin-top: 1rem;}
+form button.btn:hover{background-color:rgba(246, 152, 0 , .5) ;color:#fff ;}
+
+/* Section FAQ */
+#faq{padding-block: 3rem; height: 960px; scroll-behavior: smooth; }
+#faq h2{color: var(--hell-blue);}
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background: var(--main-gradient-90-);}
+
+.accordion-button{color: var(--main-color);}
+.accordion-button::after{filter: invert(55%) sepia(10%) saturate(7499%) hue-rotate(11deg) brightness(108%) contrast(105%);}
+.accordion-button:focus {border-color: var(--gray);box-shadow: none;}
+#faq img{width: 50%; right:15%;}
+#faq div.faq-bg{ width: 100%; height: 400px; background-color: var(--gray);margin-top: var(--faq-bg-mt);}  
+#faq .accordion{top: calc(2 * var(--faq-bg-mt)); left: 100px; width: 50%;}
+
+
+/* Kontakt und Impressum Bereich  */
+#kontakt,#impressum {scroll-behavior: smooth;}
+#kontakt h2,#impressum h2{ color:var(--main-color) ;}
+#kontakt h3,#impressum h3{ color:var(--hell-blue) ;}
+#kontakt hr,#impressum hr{height: 3px; background-color: var(--orange); border-top:none ; opacity: 1;}
+#kontakt address,#kontakt div,
+#impressum address,#impressum div{font-size: 1.3rem; margin-right: 1rem;}
+#kontakt div{animation:fadeInLeft 1s ease-in-out ; -webkit-animation:fadeInLeft 1s ease-in-out ; }
+#kontakt iframe{animation:fadeInRight 1s ease-in-out ;-webkit-animation:fadeInRight 1s ease-in-out ;}
+#kontakt div img,#impressum div img{margin-right: .7rem; width: 25px;}
+#kontakt div{line-height: 2;}
+#impressum{background: var(--grau-gradient); padding-block: 2rem;}
+#impressum div{line-height: 1.8;}
+
+
+
+/* Footer Bereich */
+footer{background: var(--main-gradient);padding: var(--section-padding); border:none; }
+footer p,footer ul a{color: #fff;}
+footer ul li:hover a{color: var(--orange);}
+     
+
+
+
+/* Media Query Bereich */
+
+/* ************************************
+    ******* (max-width : 992px)************
+    *********************************** */
+
+@media only screen and (max-width : 992px) {
+    h2{font-size: 2.2rem;}
+    h3{font-size: 1.6rem;}
+
+    /* Slider Bereich */
+    .slider .slide .teaser-text {width: 340px; top: 50px;}
+    .slider .slide .teaser-text.planung,
+    .slider .slide .teaser-text.umbau{width: 400px;}
+    .slider .slide .teaser-text h2 { font-size: 2rem;}
+    .slider .slide .teaser-text p {font-size: 1.1rem;}
+
+    #anleitung article div{ width: 95%; }
+
+/* unsere Expertise Section */
+    #unsereExpertise .infografik article {padding-bottom: 0;}
+    #unsereExpertise article p{font-size: 1.1rem;}
+/* Technologie und Beratung  */
+    #Beratung figure,#Technologie figure{align-self: stretch;}
+     #Beratung figure img,#Technologie figure img{height: 100%;}
+        
+     }
+
+@media only screen and (max-width : 991px){
+           /* Section Anleitung */
+#anleitung{padding: 1.5rem .5rem; display: block;}
+#anleitung article div{ width: 90%; margin: 1rem auto 2rem;
+    transform:rotate(0); -webkit-transform:rotate(0); -moz-transform:rotate(0); -ms-transform:rotate(0); -o-transform:rotate(0); }
+
+#anleitung figure{
+    transform:rotate(0) ;
+     -webkit-transform:rotate(0) ;
+     -moz-transform:rotate(0) ;
+     -ms-transform:rotate(0) ;
+     -o-transform:rotate(0) ;
+     width: 70%;
+    margin-inline: auto;
+}
+#anleitung figure img {
+	height: 474px;
+}
+     }
+      
+
+     
+/* ************************************
+    ******* (min-width : 769px)************
+    *********************************** */
+@media only screen and (min-width : 769px){
+    #bar,nav#navbarMobile{display: none;}}
+
+
+/* ************************************
+    ******* (width <= 768px)************
+    *********************************** */
+@media only screen and (width <= 768px){
+h2{font-size: 1.8rem;}
+h3{font-size: 1.5rem;} 
+
+/* Header Bereich */
+.header-top{background:var(--main-gradient);justify-content: normal ; gap: .5rem;}
+.header-top::before{background:var(--grau-gradient);width: 180px;}
+header nav.navbar{display: none;}
+#bar {font-size: 1.5rem;background-color: transparent;position: absolute; cursor: pointer;
+    right: 1rem;top: 1rem;padding-inline: .7rem;color: #fff; border: 1px solid #fff;box-shadow: 0 0px 7px 0px #fff;
+    border-radius:5px ;-webkit-border-radius:5px ;-moz-border-radius:5px ;-ms-border-radius:5px ;-o-border-radius:5px ;}
+nav#navbarMobile{width: 72.5%;margin-left: auto;height: 0; display: none; background: rgba(255,255,255,1);
+    position: absolute;right: 0;text-align: end;
+    transition: all 500ms ease-in-out ;-webkit-transition: all 500ms ease-in-out ;-moz-transition: all 500ms ease-in-out ;
+    -ms-transition: all 500ms ease-in-out ;-o-transition: all 500ms ease-in-out ;}
+.navbar-toggler:focus{box-shadow:0 0 0 0.25rem var(--hell-blue);}
+.header-right{padding-inline: 0;}
+.header-right h1{font-size: 2.2rem; font-weight: bold; color: #fff; letter-spacing: 4px;}
+.header-right h1 span:last-child{ font-size: 1.7rem;}
+.header-right p{font-size: 1rem;}
+header .navbar-collapse{padding-right: 0;}
+header nav ul.navbar-nav li{padding: 0.8rem; border-bottom: 2px solid var(--gray);}
+nav div button.navbar-toggler {
+    position: absolute !important;top: 1.2rem;right: 1.2rem;
+    border-color: #fff;background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 11px 0 #000;
+}
+
+/* Slider Bereich */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 403px;
+}
+.slider .slide  .teaser-text {--height: 120px;position: static !important; width: 100%;
+height: var(--height);background: var(--main-gradient-90); text-align: center;
+    display: block;
+    position: relative !important;
+    top: 0;
+    padding-inline: 1.5rem;
+    box-shadow: none;
+    padding-block: .5rem;
+    color: #fff;
+}
+.slider .slide .teaser-text.planung,
+.slider .slide .teaser-text.umbau{width: 100%;}
+.header-top figure{width: 135px !important;}
+.slider .slide .teaser-text figure{
+    position: absolute;
+    z-index: 1;
+    height:calc(var(--height) - 10px); 
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%) ;
+    -webkit-transform:translate(-50%,-50%) ;
+    -moz-transform:translate(-50%,-50%) ;
+    -ms-transform:translate(-50%,-50%) ;
+    -o-transform:translate(-50%,-50%) ;
+    opacity: .5;
+}
+.teaser-text img {
+    height: 100%;
+    width: 100%;
+}
+.slider .slide .teaser-text article{display: flex; justify-content: center; align-items: center;
+    margin-inline: auto; gap: 1rem;
+    position: relative; z-index: 2;
+    gap: 1rem; height: 100%;margin-inline: auto;}
+
+    /* Anleitung Section */
+#anleitung{padding-inline: 1.5rem;}
+#anleitung article div{ width: 100%; }
+#anleitung figure{ width: 100%;margin-inline: auto;}
+#anleitung figure img {width: 50%;height: auto}
+
+/* unsere Expertise Section */
+#unsereExpertise h2 + p {font-size: 1.1rem;}
+#unsereExpertise p{font-size: 1rem;}
+#unsereExpertise article {padding-inline:  1.5rem;}
+#unsereExpertise article p span {font-size: 1.1rem;}
+#unsereExpertise .infografik {display: block;}
+#unsereExpertise .infografik article, #unsereExpertise .infografik object,
+#unsereExpertise #Beratung figure, #unsereExpertise #Technologie figure,
+#unsereExpertise #Beratung figure img, #unsereExpertise #Technologie figure img,
+#unsereExpertise #Beratung div, #unsereExpertise #Technologie div{width: 100%;}
+#unsereExpertise .infografik article p:last-child{margin-bottom: 0;}
+#unsereExpertise #Beratung{flex-direction: column-reverse;}
+#unsereExpertise #Technologie{padding-block: 0;}
+
+/* Erstanfrage-Formular */
+#erstanfrage-Formular {padding: 0;}
+#erstanfrage-Formular form {box-shadow: none; padding:1.5rem;}
+
+/* FAQ Section */
+#faq img {width: 60%;right: 10%;}
+#faq div.faq-bg {height: 320px;margin-top: calc(var(--faq-bg-mt) / 2) ;}
+#faq .accordion {top: calc(100px + var(--faq-bg-mt));left: 10%;width: 60%;}
+
+/* Kontakt und Impressum */
+#kontakt address, #kontakt div, #impressum address, #impressum div {font-size: 1.1rem;}
+     }
+
+    
+
+/* ************************************
+    ******* (width < 576px)************
+    *********************************** */
+
+@media only screen and (width <= 576px) {
+    h2{font-size: 1.6rem;}
+    h3{font-size: 1.3rem;}
+  
+/* Header Bereich */
+.header-top{background:var(--main-gradient-90);height: auto; flex-direction: column; }
+.header-top::before {
+ 
+    display: none;
+}
+.header-top figure {
+    width: 127px !important;
+    height: 45%;
+    align-self: flex-start;
+    background: var(--grau-gradient);
+    margin: 0 !important;
+    padding: 1rem;
+}
+.header-right{width: 100%; text-align: center; padding: 1rem 0;}
+.header-right h1{ text-align: center; padding-inline: 1rem; font-size: 2rem;}
+.header-right h1 span:last-child {
+    font-size: 1.5rem;
+}
+.header-right p{text-align: center; width: 70%; margin-inline: auto; margin-bottom: .5rem;} 
+
+button.navbar-toggler.collapsed{margin-right: 1rem;}
+.navbar-nav {
+    background-color: #fff;
+    width: 100%;;
+}
+
+/* Slider Bereich */
+
+ div.slider-container div.slider .slide .teaser-text { --height: 80px !important; height: var(--height);padding-inline: 1rem; }
+.slider .slide .teaser-text h2 {font-size: 1.5rem;}
+#prev, #next{font-size: 4rem;}
+
+/* Section Anleitung */
+#anleitung{padding-inline: 1rem;}
+#anleitung article h2 {font-size: 1.4rem;}
+.slider .slide .teaser-text p {font-size: 1rem;}
+
+/* Section unsere Expertise */
+main #unsereExpertise .unsereExpertise{padding-block: .7rem !important;}
+#unsereExpertise .infografik{display: block;}
+#unsereExpertise object{margin: 2rem auto;}
+#unsereExpertise article#Beratung{display: flex !important;flex-direction: column-reverse;}
+
+
+/* Section das erstanfrage Formular */
+#erstanfrage-Formular{background: var(--hell-blue);}
+#erstanfrage-Formular form{width:100%; height:auto;padding:1rem 1rem 1.5rem 1rem;display: block;box-shadow:none;}
+#erstanfrage-Formular form div:first-child{width: 100%;}
+#erstanfrage-Formular form #left,#erstanfrage-Formular form #right{width: 100%;}
+form #solarkollektoren input,form input#wohnflaeche,
+form select#warmWasserVerbrauch{width: 85% !important;}
+form button.btn{width: 50%; margin-inline: 25% !important;}
+
+/* Section FAQ */
+#faq{padding-block: 1.5rem; height: auto; }
+#faq img{ position: static !important; width: 100%; margin-inline: auto;}
+#faq div.faq-bg{display: none;}  
+#faq .accordion{position: static !important;  width: 100%;}
+.accordion-button {
+    padding:1rem;
+    line-height: 1.5;
+    justify-content: space-between;
+    border-radius:0 !important;
+    -webkit-border-radius:0 !important;
+    -moz-border-radius:0 !important;
+    -ms-border-radius:0 !important;
+    -o-border-radius:0 !important;
+}
+.accordion-button::after{margin-left: .5rem;}
+
+/* Kontakt und Impressum Bereich  */
+#kontakt{flex-direction: column;}
+#kontakt div, #kontakt iframe{width: 100%; padding-inline: 0;}
+#kontakt div:first-child,#impressum div:first-child{margin-bottom: .7rem; padding-inline: 1.5rem;}
+#kontakt h2,#impressum h2{  margin-bottom: 1.5rem !important;}
+#kontakt div img,#impressum div img{width: 25px;}
+#kontakt address, #kontakt div, #impressum address, #impressum div {font-size: 1rem;}
+#impressum{padding-block:1.2rem 1rem;}
+     
+ /* Footer Bereich */
+ footer{display: block !important; padding: 1rem; text-align: center; }
+ footer p,footer ul a{color: #fff; font-size: 1.1rem; }
+ 
+
+        
+     }
+
+     /* ************************************
+    ******* (width <= 420px)************
+    *********************************** */
+@media only screen and (width <= 420px){
+    h2{font-size: 1.4rem;}
+    h3{font-size: 1.2rem;}
+
+/* Header Bereich */
+.header-top figure {width: 108px !important;height: 30%;padding: .7rem;}
+.header-right {padding:0;}
+
+ /* Slider Bereich */
+.slider .slide  .teaser-text {padding-inline: .5rem; gap: .5rem; --height: 50px;}
+.slider .slide .teaser-text article h2{font-size: 1.1rem;}
+.slider .slide .teaser-text article p{font-size: .8rem;}
+#prev, #next{font-size: 3.5rem;}
+
+/* Main Bereich */
+main p{font-size: .9rem !important;} 
+#anleitung figure{width: 95%;}
+#anleitung article h2 {font-size: 1.4rem;}
+#unsereExpertise article p span {font-size: 1rem;}
+#impressum div {margin-right: 0; font-size: 0.95rem;}
+/* Footer Bereich */
+footer ul{padding-left: 0;}
+footer p,footer ul a{color: #fff; font-size: .9rem; }
+
+
+
+
+
+}   

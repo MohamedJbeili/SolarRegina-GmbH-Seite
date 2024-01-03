@@ -1,0 +1,20 @@
+Mohamed Jbeili Prüfung Nr.4734
+
+Benutzeranleitung für die Seite
+
+Diese Seite verwendet Bootstrap und JavaScript für die Funktionalitäten. 
+
+- Wenn Sie auf den Slider klicken, erscheint oben eine Box mit Informationen zum ausgewählten Slider.
+- Durch Klicken auf die Pfeile können Sie zwischen den Bildern des Sliders navigieren.
+-Wenn die Maus über den Slider bewegt wird,stoppt er die Bewegung und bleibt stehen bis die Maus vom Slider entfernt wird.
+
+Stellen Sie sicher, dass JavaScript aktiviert ist, da der Slider darauf basiert. Außerdem gibt es im Kontaktbereich auch eine Google Map, die ohne JavaScript und Internetverbindung nicht angezeigt wird.
+
+Anforderungen
+
+Um die Seite ordnungsgemäß nutzen zu können, müssen folgende Anforderungen erfüllt sein:
+
+- Aktivierung von JavaScript im Browser.
+- Internetverbindung für Google Map
+
+Optimiert für Browser Google Chrome.
